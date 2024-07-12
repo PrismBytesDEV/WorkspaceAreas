@@ -1,0 +1,36 @@
+[gd_scene load_steps=4 format=3 uid="uid://dbh1o4ph27hlb"]
+
+[ext_resource type="Theme" uid="uid://cxi7ihqtqqtu6" path="res://addons/WorkspaceAreas/example/Themes/darkTheme.tres" id="1_bmho8"]
+[ext_resource type="Script" path="res://addons/WorkspaceAreas/example/ScriptsForExample/CustomExampleArea.gd" id="1_ndu0t"]
+[ext_resource type="Texture2D" uid="uid://c3aer8staoyda" path="res://icon.svg" id="3_kjj6v"]
+
+[node name="ExampleWorkspaceArea" type="Panel"]
+clip_children = 2
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_bmho8")
+script = ExtResource("1_ndu0t")
+workspaceAreaIcon = ExtResource("3_kjj6v")
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.0846899, 0.0846899, 0.0846899, 1)
+
+[node name="TextureRect" type="TextureRect" parent="Background"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_kjj6v")
+stretch_mode = 5

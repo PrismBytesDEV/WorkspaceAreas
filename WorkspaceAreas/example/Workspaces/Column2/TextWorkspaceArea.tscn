@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://bgbigumdkrgue"]
+
+[ext_resource type="Theme" uid="uid://cxi7ihqtqqtu6" path="res://addons/WorkspaceAreas/example/Themes/darkTheme.tres" id="1_s7jid"]
+[ext_resource type="Script" path="res://addons/WorkspaceAreas/scripts/WorkspaceArea.gd" id="1_ufvne"]
+[ext_resource type="Texture2D" uid="uid://c3aer8staoyda" path="res://icon.svg" id="2_ib7j4"]
+
+[node name="WorkspaceArea2" type="Panel"]
+clip_children = 2
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_s7jid")
+script = ExtResource("1_ufvne")
+workspaceAreaIcon = ExtResource("2_ib7j4")
+
+[node name="TextEdit" type="TextEdit" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2

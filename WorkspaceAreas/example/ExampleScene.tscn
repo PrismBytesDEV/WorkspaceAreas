@@ -1,0 +1,51 @@
+[gd_scene load_steps=6 format=3 uid="uid://d0y5p7dv7eewy"]
+
+[ext_resource type="Theme" uid="uid://cxi7ihqtqqtu6" path="res://addons/WorkspaceAreas/example/Themes/darkTheme.tres" id="1_gtnvn"]
+[ext_resource type="Script" path="res://addons/WorkspaceAreas/scripts/AreaSplitContainer.gd" id="2_heytt"]
+[ext_resource type="PackedScene" uid="uid://cupdk0gyp248o" path="res://addons/WorkspaceAreas/example/Workspaces/Column1/ColorWorkspaceArea.tscn" id="3_0ager"]
+[ext_resource type="PackedScene" uid="uid://bgbigumdkrgue" path="res://addons/WorkspaceAreas/example/Workspaces/Column2/TextWorkspaceArea.tscn" id="4_428nd"]
+[ext_resource type="PackedScene" uid="uid://dbh1o4ph27hlb" path="res://addons/WorkspaceAreas/example/Workspaces/Custom_Workspaces/ExampleWorkspaceArea.tscn" id="5_co3is"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_gtnvn")
+metadata/_edit_use_anchors_ = true
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.054902, 0.054902, 0.054902, 1)
+
+[node name="AreaSplitContainer" type="SplitContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+split_offset = 600
+script = ExtResource("2_heytt")
+
+[node name="ColorWorkspaceArea" parent="AreaSplitContainer" instance=ExtResource("3_0ager")]
+layout_mode = 2
+
+[node name="AreaSplitContainer2" type="SplitContainer" parent="AreaSplitContainer"]
+layout_mode = 2
+split_offset = 345
+vertical = true
+script = ExtResource("2_heytt")
+
+[node name="TextWorkspaceArea" parent="AreaSplitContainer/AreaSplitContainer2" instance=ExtResource("4_428nd")]
+layout_mode = 2
+
+[node name="ExampleWorkspaceArea" parent="AreaSplitContainer/AreaSplitContainer2" instance=ExtResource("5_co3is")]
+layout_mode = 2

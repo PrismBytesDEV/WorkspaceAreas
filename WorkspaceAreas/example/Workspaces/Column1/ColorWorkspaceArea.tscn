@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://cupdk0gyp248o"]
+
+[ext_resource type="Script" path="res://addons/WorkspaceAreas/scripts/WorkspaceArea.gd" id="1_mfu34"]
+[ext_resource type="Theme" uid="uid://cxi7ihqtqqtu6" path="res://addons/WorkspaceAreas/example/Themes/darkTheme.tres" id="1_n62ae"]
+[ext_resource type="Texture2D" uid="uid://c3aer8staoyda" path="res://icon.svg" id="2_h6ymc"]
+
+[node name="WorkspaceArea" type="Panel"]
+clip_children = 2
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_n62ae")
+script = ExtResource("1_mfu34")
+workspaceAreaIcon = ExtResource("2_h6ymc")
+
+[node name="ColorPickerButton" type="ColorPickerButton" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.707967, 0.707967, 0.707967, 1)
